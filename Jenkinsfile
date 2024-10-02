@@ -17,7 +17,7 @@ pipeline{
                 echo 'prod dploiment de l aaplication ....'
             }
 
-        }
+        } 
     }
 
 }
