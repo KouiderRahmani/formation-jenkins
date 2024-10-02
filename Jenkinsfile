@@ -15,7 +15,7 @@ pipeline{
         stage('prod'){
             steps{
                 echo 'prod dploiment de l aaplication ....'
-            }Rahmani
+            }
 
         }
     }
