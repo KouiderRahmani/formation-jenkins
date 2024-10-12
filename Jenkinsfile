@@ -3,21 +3,14 @@ pipeline{
     stages {
         stage('build'){
             steps{
-                echo 'build application....'
+                echo "BRANCHE_NAME: ${env.BRANCHE_NAME}"
+                echo "BRANCHE_IS_PRIMARY: ${env.BRANCHE_IS_PRIMARY}"
+                echo "CI: ${env.CI}"
+                echo "BUILD_NUMBER:RANCHE_NAME: ${env.BUILD_NUMBER}"
+                echo "JENKINS_URL: ${env.JENKINS_URL}"
             }
         }
-        stage('tests'){
-            steps{
-                echo 'Excution tests....'
-            }
-
-        }
-        stage('prod'){
-            steps{
-                echo 'prod dploiment de l aaplication ....'
-            }
-
-        } 
+        
     }
 
 }
