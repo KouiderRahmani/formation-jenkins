@@ -1,10 +1,9 @@
 pipeline{
-    agent any
-    /*agent {
+    agent {
         docker{
             image 'node:21-alpine'
         }
-    }*/
+    }
 
     options{
         timeout(time:1,unit:"HOURS")
