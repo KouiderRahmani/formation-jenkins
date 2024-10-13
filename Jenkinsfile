@@ -1,10 +1,6 @@
 pipeline{
     agent any
 
-     triggers{
-        pollSCM('* * * * *')
-     }
-    
     
     stages {
         stage('build') {
@@ -19,7 +15,7 @@ pipeline{
                 message 'Voulez-vous deployer en production ?'
                 ok 'deployer !'
                 submitter 'admin,devops'
-                submitParameter 'USER_SUBMIT'
+                submitterParameter 'USER_SUBMIT'
                 parameters (name : 'VERSION', defaultValue:'latest',description : 'une version ')
             }
             steps{
