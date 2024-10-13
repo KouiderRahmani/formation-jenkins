@@ -3,14 +3,14 @@ pipeline{
 
      triggers{
         cron('*****')
-        
+
      }
     
     
     stages {
         stage('build') {
             steps{
-               echo "build" 
+               echo 'build !' 
             }
         }
     }
