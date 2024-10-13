@@ -8,8 +8,7 @@ pipeline{
                echo 'build !' 
             }
         }
-    }
-    stages {
+
         stage('deployement production ') {
             input{
                 message 'Voulez-vous deployer en production ?'
