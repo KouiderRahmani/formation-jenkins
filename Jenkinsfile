@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     stages {
-        stage('build and test') {
+        stage('build and test'){
             matrix{
                 axes{
                     axis{
