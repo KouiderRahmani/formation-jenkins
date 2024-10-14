@@ -19,14 +19,13 @@ pipeline{
                 }
             }
         
-
-            stage('deployement production ') {
+        }
+        stage('deployement production ') {
             
-                steps{
+            steps{
                     echo "deploy !"
-                }
             }
         }
-
     }
+
 }
