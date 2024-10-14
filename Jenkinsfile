@@ -1,6 +1,9 @@
 pipeline{
     agent any
-
+    
+    parameters{
+        booleanParam(name:'DEPLOY_TO',defaultValue:false, description:'production ?')
+    }
     
     stages {
         stage('build') {
@@ -12,20 +15,13 @@ pipeline{
         stage('deployement production ') {
             
             when{
-                branch 'main'
-            }
-            input{
-                message 'Voulez-vous deployer en production ?'
-                ok 'deployer !'
-                submitter 'admin,devops'
-                submitterParameter 'USER_SUBMIT'
-                parameters {
-                string (name : 'VERSION', defaultValue:'latest',description : 'une version ')
+                allOf{
+                    branch 'main'
+                    equals exepted:true ,actual:params.DEPLOY_TO
                 }
             }
+            
             steps{
-               echo "user : ${USER_SUBMIT}"
-               echo "version : ${VERSION}"
                echo "deploy !"
             }
         }
