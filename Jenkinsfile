@@ -1,11 +1,12 @@
 pipeline{
     agent any
-
+    tools{
+        gradel 'gradel_8.11'
+    }
     stages{
         stage('build'){
             steps{
-                sh 'echo hello > word.txt'
-                archiveArtifacts(artifacts:'*.txt')
+                sh 'gradel -v'
             }
         }
     }
