@@ -20,7 +20,7 @@ pipeline{
                 }
             }
             steps{
-               echo "user : ${USER_SUBM}"
+               echo "user : ${USER_SUBMIT}"
                echo "version : ${VERSION}"
                echo "deploy !"
             }
