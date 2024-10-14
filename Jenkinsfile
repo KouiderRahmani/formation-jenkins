@@ -1,9 +1,6 @@
 pipeline{
     agent any
-   /* options{
-        parallelAlwaysFailFAST()
-    }*/
-    
+
     stages {
         stage('build') {
             failFast true;
