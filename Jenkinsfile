@@ -10,6 +10,10 @@ pipeline{
         }
 
         stage('deployement production ') {
+            
+            when{
+                branch 'prod'
+            }
             input{
                 message 'Voulez-vous deployer en production ?'
                 ok 'deployer !'
