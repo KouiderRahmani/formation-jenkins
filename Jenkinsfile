@@ -15,8 +15,9 @@ pipeline{
                 ok 'deployer !'
                 submitter 'admin,devops'
                 submitterParameter 'USER_SUBMIT'
-                parameters 
+                parameters {
                 string (name : 'VERSION', defaultValue:'latest',description : 'une version ')
+                }
             }
             steps{
                echo "user : ${USER_SUBM}"
