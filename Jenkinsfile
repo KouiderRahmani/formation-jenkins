@@ -17,7 +17,7 @@ pipeline{
             when{
                 allOf{
                     branch 'main'
-                    equals exepted:true ,actual:params.DEPLOY_TO
+                    equals expected:true ,actual:params.DEPLOY_TO
                 }
             }
             
