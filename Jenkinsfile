@@ -20,16 +20,16 @@ pipeline{
                     echo "frent end  !"
                     }
                 }
-        }
+            }
         
 
-        stage('deployement production ') {
+            stage('deployement production ') {
             
-            steps{
-               echo "deploy !"
+                steps{
+                    echo "deploy !"
+                }
             }
         }
-    }
 
-   
+    }
 }
