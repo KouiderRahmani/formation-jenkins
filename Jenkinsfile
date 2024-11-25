@@ -12,10 +12,5 @@ pipeline{
             }
         }
     }
-    post{
-            success{
-                  emailext (to:'rahmani.k@hotmail.fr' ,body:'test body' ,
-                          subject: 'test jenkins mail')
-            }
-        }
+    
 }
