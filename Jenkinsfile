@@ -15,7 +15,7 @@ pipeline{
     }
     post{
             success{
-                  emailext (to: 'rahmanikouider.1@gmail.com', body: 'test body' ,
+                  emailext (to: 'rahmanikouider.k@gmail.com', body: 'test body' ,
                           subject: 'test jenkins mail')
             }
         }
